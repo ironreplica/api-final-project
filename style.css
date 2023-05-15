@@ -21,6 +21,19 @@ p {
   text-align: center;
   letter-spacing: 0.2em;
 }
+.date h1 {
+  color: black;
+}
+.temp {
+}
+.weather {
+  padding: 20px;
+  margin: auto;
+  border-radius: 10px;
+  width: 200px;
+  height: 350px;
+  background-color: aliceblue;
+}
 .weather-container {
   width: 100%;
   display: flex;
@@ -32,11 +45,10 @@ p {
   margin: 0 auto;
 }
 .weather-info-container {
-  position: absolute;
-  width: 300px;
-  height: 350px;
-  background-color: lightblue;
+  padding: 20px;
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: green;
   border-radius: 10px;
-  bottom: 400px;
-  left: 400px;
 }
