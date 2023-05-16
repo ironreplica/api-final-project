@@ -19,6 +19,8 @@ fetch(URL)
         let card = document.createElement("div");
 
         let date = document.createElement("h1");
+        let hour = document.createElement("h1");
+
         let temp = document.createElement("h1");
 
         let weather = document.createElement("p");
@@ -42,13 +44,12 @@ fetch(URL)
           }
         }
 
-        if (dateHourArr[1].slice(0, 2) < 12) {
-        } else {
-        }
-
-        date.textContent = tempHour();
+        date.textContent = dateHourArr[0];
+        hour.textContent =  tempHour();
+        temp.textContent = Math.round(day.list[i-1].main.temp) + "\u00B0F";
 
         card.appendChild(date);
+        card.appendChild(hour);
         card.appendChild(temp);
         card.appendChild(weather);
 
