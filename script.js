@@ -31,12 +31,12 @@ fetch(URL)
         var curDate = day.list[i - 1].dt_txt.replace(/^...../, "");
         var dateHourArr = curDate.split(" ");
 
-        // convert to string, add date and temps
+        // convert to string, add date and temps, if more then 12, add pm if not am
         function tempHour() {
           if (dateHourArr[1].slice(0, 2) < 12) {
             return dateHourArr[1].slice(0, 2);
           } else if (dateHourArr[1].slice(0, 2) > 12) {
-            return dateHourArr[1].slice(0, 2) - 12;
+            return (dateHourArr[1].slice(0, 2) - 12) + "PM";
           } else {
             return 12;
           }
