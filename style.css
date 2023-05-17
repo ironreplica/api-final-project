@@ -7,32 +7,62 @@ p {
   font-size: 26px;
   text-align: center;
 }
-p{
+
+body {
+  background-image: url("./media/stansbury-bg.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+p {
   font-size: 20px;
+}
+.title {
+  width: 600px;
+  margin: auto;
+  height: auto;
+  padding: 20px;
+}
+.title h1 {
+  font-size: 32px;
+  background-color: rgb(175, 235, 255);
+  border-radius: 10px;
 }
 .container {
   border-radius: 10px;
   margin: auto auto;
   width: 70%;
-  height: 100%;
-  background-color: rgb(47, 77, 87);
+  height: auto;
+  background-color: rgb(175, 235, 255);
+  margin-bottom: 20px;
+
   display: flex;
 }
-.news-container{
+.news-container {
   border-radius: 20px;
-  position: absolute;
-  bottom: 350px;
-  margin-left: 80px;
-  
-  background-color: aliceblue;
-  width: 300px;
-  height: 450px;
+  flex-direction: column;
+  background-color: rgb(175, 235, 255);
+  height: auto;
 }
-.title {
+.news-container h1,
+p {
+  padding: 10px 30px;
+}
+.news-container h1 {
+  font-size: 32px;
+}
+.news-container p {
+  margin: 0 auto;
+  font-size: 22px;
+  width: 600px;
+}
+.main-container {
   width: 100%;
   height: auto;
 }
-.title h1 {
+.main-container h1 {
   text-align: center;
   letter-spacing: 0.2em;
 }
@@ -47,10 +77,11 @@ p{
   border-radius: 10px;
   width: 175px;
   height: auto;
-  background-color: rgb(108, 145, 177);
+  background-color: rgb(232, 242, 251);
 }
 .weather-container {
-  width: 100%;
+  padding: 20px;
+  width: auto;
   display: flex;
   position: relative;
 }
@@ -64,6 +95,6 @@ p{
   display: flex;
   width: 100%;
   height: auto;
-  
+
   border-radius: 10px;
 }

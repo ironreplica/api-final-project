@@ -13,8 +13,8 @@ fetch(URL)
 
     for (var i = 1; i <= 40; i++) {
       if (i % 8 == 0) {
-        console.log(i - 1);
-        console.log(day.list[i - 1]);
+        // console.log(i - 1);
+        // console.log(day.list[i - 1]);
 
         let card = document.createElement("div");
 
@@ -38,15 +38,15 @@ fetch(URL)
           if (dateHourArr[1].slice(0, 2) < 12) {
             return dateHourArr[1].slice(0, 2);
           } else if (dateHourArr[1].slice(0, 2) > 12) {
-            return (dateHourArr[1].slice(0, 2) - 12) + "PM";
+            return dateHourArr[1].slice(0, 2) - 12 + "PM";
           } else {
             return 12;
           }
         }
 
         date.textContent = dateHourArr[0];
-        hour.textContent =  tempHour();
-        temp.textContent = Math.round(day.list[i-1].main.temp) + "\u00B0F";
+        hour.textContent = tempHour();
+        temp.textContent = Math.round(day.list[i - 1].main.temp) + "\u00B0F";
 
         card.appendChild(date);
         card.appendChild(hour);
