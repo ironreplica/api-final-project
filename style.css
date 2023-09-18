@@ -2,10 +2,12 @@ h1,
 h2,
 h2,
 p {
-  font-family: "Montserrat", sans-serif;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif; */
   font-size: 26px;
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
 }
 
 body {
