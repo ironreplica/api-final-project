@@ -4,13 +4,14 @@ let temp;
 let weatherApiKey = "efb559401f7c8ecab975ec7c30e877ba";
 let newsApiKey = "19dd6a7af13a4a48b6158b5a51937e8f";
 
-// xyfBUQGLxvAwIXiR4j748TCw5B2EoaDc
+let NewYorkTimesApiKey = "xyfBUQGLxvAwIXiR4j748TCw5B2EoaDc";
 
 let lat = 40.640209;
 let lon = -112.304764;
 
 let WeatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${weatherApiKey}&units=imperial`;
 let NewsURL = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${newsApiKey}`;
+let neyYorkTimesURL = `https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=${NewYorkTimesApiKey}`
 fetch(WeatherURL)
   .then((response) => response.json())
   .then((jsObject) => {
@@ -57,13 +58,13 @@ fetch(WeatherURL)
       }
     }
   });
-fetch(NewsURL)
+fetch(neyYorkTimesURL)
   .then((response) => response.json())
   .then((jsObject) => {
     news = jsObject;
     /* Get top 3 articles */
     for (var i = 0; i < 3; i++) {
-      newsContent = news.articles[i];
+      newsContent = news.results[i];
 
       let card = document.createElement("div");
       let newsTitle = document.createElement("h1");
@@ -71,7 +72,7 @@ fetch(NewsURL)
       let source = document.createElement("a");
 
       newsTitle.textContent = newsContent.title;
-      newsDescription.textContent = newsContent.description;
+      newsDescription.textContent = newsContent.abstract;
       source.textContent = "Source";
       source.href = newsContent.url;
 
